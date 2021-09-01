@@ -1,0 +1,67 @@
+body{
+    background-color: #512da8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.frame{
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 500px;
+    height: 500px;
+}
+
+.ball{
+    width: 150px;
+    height: 150px;
+    background-color: #18ffff;
+    border-radius: 50%;
+    box-shadow: 15px 15px 14px #84ffff inset, -15px -15px 10px #00b8d4 inset;
+    position: relative;
+
+    animation: bounce 1s  infinite;
+}
+
+@keyframes bounce {
+    0% {transform: translate3d(0,0,0);}
+    15% {transform: translate3d(0,10px,0);
+         height: 130px;
+         width: 170px;}
+    58%{transform: translate3d(0,-200px,0);}     
+    100% {transform: translate3d(0,0,0);}
+}
+/* floor css */
+.floor{
+    width: 100px;
+    height: 20px;
+    background-color: #311b92;
+    position: absolute;
+    top: 380px;
+    z-index: -1;
+    border-radius: 40% 40% 50% 50%  ;
+    box-shadow: 0px 0px 7px 9px #311b92;
+    animation: shadowsize 1s infinite;
+}
+
+@keyframes shadowsize {
+    0%{
+        height: 20px;
+        width: 100px;
+    }
+    15%{
+        height: 20px;
+        width: 110px;
+    }
+    58%{
+        height: 15px;
+        width: 80px;
+    }
+    100%{
+        height: 20px;
+        width: 100px;
+    }
+}
